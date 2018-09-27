@@ -37,28 +37,28 @@ class App extends Component {
       list: [{
         pagePath: "pages/index/index",
         text: "首页",
-        selectedIconPath: "./asset/images/home1.png",
-        iconPath: "./asset/images/home2.png",
+        selectedIconPath: "./asset/images/nav/home1.png",
+        iconPath: "./asset/images/nav/home2.png",
       }, {
         pagePath: "pages/demo/index",
         text: "案例",
-        selectedIconPath: "./asset/images/case1.png",
-        iconPath: "./asset/images/case2.png"
+        selectedIconPath: "./asset/images/nav/case1.png",
+        iconPath: "./asset/images/nav/case2.png"
       }, {
         pagePath: "pages/demo/index",
         text: "报价",
-        selectedIconPath: "./asset/images/price1.png",
-        iconPath: "./asset/images/price2.png"
+        selectedIconPath: "./asset/images/nav/price1.png",
+        iconPath: "./asset/images/nav/price2.png"
       }, {
         pagePath: "pages/demo/index",
         text: "设计圈",
-        selectedIconPath: "./asset/images/design1.png",
-        iconPath: "./asset/images/design2.png"
+        selectedIconPath: "./asset/images/nav/design1.png",
+        iconPath: "./asset/images/nav/design2.png"
       }, {
         pagePath: "pages/demo/index",
         text: "我的",
-        selectedIconPath: "./asset/images/user1.png",
-        iconPath: "./asset/images/user2.png"
+        selectedIconPath: "./asset/images/nav/user1.png",
+        iconPath: "./asset/images/nav/user2.png"
       }]
     },
   }

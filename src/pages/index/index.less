@@ -1,0 +1,146 @@
+@import '../../app.less';
+/*css public start*/
+
+.floatfix {
+    overflow: hidden;
+    margin-left: 46%
+}
+
+/*css public end*/
+
+/*slider start*/
+
+.slider-contaner {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider-item+.slider-item {
+    opacity: 0;
+}
+
+.slider-item {
+    width: 100%;
+    height: 330px;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    background-size: 100%;
+}
+
+.focus-container {
+    position: absolute;
+    z-index: 7;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    .li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        float: left;
+        margin-right: 10px;
+        background: #fff;
+    }
+}
+
+.focus-item {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    animation-timing-function: linear;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+}
+
+.focus-item2,
+.focus-item3,
+.focus-item4,
+.focus-item5 {
+    opacity: 0;
+}
+
+/*设置轮播焦点的位置*/
+
+.focus-container {
+    bottom: 2%;
+}
+
+/*设置当前图片焦点的颜色*/
+
+.focus-item {
+    background: #51B1D9;
+}
+
+/*设置动画，请根据实际需要修改秒数*/
+
+.slider-item,
+.focus-item {
+    animation-duration: 20s;
+}
+
+.slider-item1,
+.focus-item1 {
+    animation-delay: -1s;
+}
+
+.slider-item2,
+.focus-item2 {
+    animation-delay: 3s;
+}
+
+.slider-item3,
+.focus-item3 {
+    animation-delay: 7s;
+}
+
+.slider-item4,
+.focus-item4 {
+    animation-delay: 11s;
+}
+
+.slider-item5,
+.focus-item5 {
+    animation-delay: 15s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        z-index: 2;
+    }
+    5% {
+        opacity: 1;
+        z-index: 1;
+    }
+    20% {
+        opacity: 1;
+        z-index: 1;
+    }
+    25% {
+        opacity: 0;
+        z-index: 0;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+/*设置图片的高度，请根据具体需要修改百分比，响应式及时修改此值*/
+
+.slider,
+.slider-item {
+    padding-bottom: 40%;
+}
+
+.icon-module {
+    width: 60px;
+    height: 60px;
+}
+
+.text-module {
+    font-size: @smallFont;
+}
