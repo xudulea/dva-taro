@@ -1,7 +1,6 @@
-import Taro, { Component } from '@tarojs/taro'
+import { Component } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import { AtTag } from 'taro-ui'
 import './index.less'
 
 import ad1 from '../../asset/images/advertisement/ad1.jpg'
@@ -43,6 +42,10 @@ export default class Index extends Component {
     dispatch({ type: 'home/search', payload: { num: 2 } })
   }
 
+  handleClick(){
+    console.info('this');
+  }
+
   render() {
     return (
       <View>
@@ -74,28 +77,28 @@ export default class Index extends Component {
             </View>
           </View>
         </View>
-        <View className='flex'>
-          <View>
-            <View>
-              <Image className='icon-module aiCenter' src={example}></Image>
+        <View className='flex jcAround mrgt48'>
+            <View className='flex aiCenter fdColumn' onClick={this.handleClick}>
+              <View className='apricotCircle flex'>
+                <Image className='icon-module mrgAuto' src={example}></Image>
+              </View>
+              <Text className='text-module'>客户案例</Text>
             </View>
-            <Text className='text-module'>客户案例</Text>
-          </View>
-          <View>
-            <View>
-              <Image className='icon-module aiCenter' src={design}></Image>
+          <View className='flex aiCenter fdColumn'>
+            <View className='purpleCircle flex'>
+              <Image className='icon-module mrgAuto' src={design}></Image>
             </View>
             <Text className='text-module'>设计师</Text>
           </View>
-          <View>
-            <View>
-              <Image className='icon-module aiCenter' src={mall}></Image>
+          <View className='flex aiCenter fdColumn'>
+            <View className='blueCircle flex'>
+              <Image className='icon-module mrgAuto' src={mall}></Image>
             </View>
             <Text className='text-module'>家装商城</Text>
           </View>
-          <View>
-            <View>
-              <Image className='icon-module aiCenter' src={about}></Image>
+          <View className='flex aiCenter fdColumn'>
+            <View className='pinkCircle flex'>
+              <Image className='icon-module mrgAuto' src={about}></Image>
             </View>
             <Text className='text-module'>关于我们</Text>
           </View>
